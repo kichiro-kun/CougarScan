@@ -1,0 +1,25 @@
+[run]
+source = project_code
+omit = 
+    project_code/tests/*
+    */__pycache__/*
+    */venv/*
+    */.venv/*
+
+[report]
+show_missing = True
+skip_covered = True
+fail_under = 99
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if __name__ == .__main__.
+    raise NotImplementedError
+    pass
+    \.\.\.
+
+[html]
+directory = htmlcov
+
+[xml]
+output = coverage.xml

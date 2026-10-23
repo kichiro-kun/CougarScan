@@ -1,0 +1,6 @@
+.coverage
+.venv
+.vscode
+Code-Inspector-View.mdj
+__pycache__
+htmlcov
