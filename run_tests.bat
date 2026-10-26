@@ -16,8 +16,8 @@ echo =============================================
 echo Отчет о покрытии кода:
 echo =============================================
 
-REM Вывод отчета в консоль
-coverage report
+REM Вывод отчета в консоль и в файл
+coverage report & coverage report > coverage_report.txt
 
 
 echo.
