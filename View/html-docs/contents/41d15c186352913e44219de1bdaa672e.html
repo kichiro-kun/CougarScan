@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CodeElement </title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/prose.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>CodeElement </h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLClass"></span>
+          UMLClass
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CougarScan View</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='2cf8522033695fc0e8e5c569c5214507.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>Domain</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='3cb224e856cfbbc531601382f8795632.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>Entities</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='41d15c186352913e44219de1bdaa672e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>CodeElement </a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <div class='prose'><p>Базовая абстракция для любой структурной единицы кода.</p>
+<p>Хранит информацию об элементе:</p>
+<ul>
+<li>name: имя элемента (идентификатор)</li>
+<li>element_type: тип элемента (из ElementType)</li>
+<li>location: позиция элемента в исходном коде</li>
+</ul>
+<p>Бизнес-правила:</p>
+<ul>
+<li>name не может быть пустым или None</li>
+<li>element_type должен быть экземпляром ElementType</li>
+<li>location не может быть None</li>
+</ul>
+</div>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+      <section>
+        <h3>Attributes</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="322f31cf5d1e8e88445c7c7b444e923b.html">name</a></td>
+            <td>str </td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="2acea9380bc063f51ba7792db02f6c6c.html">element_type</a></td>
+            <td><a href='aeb89f82483ffd36724135c262c49d25.html'><span class='node-icon staruml-icon icon-UMLEnumeration'></span>ElementType </a> </td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="5290708edd9ea604f848ca639770d726.html">location</a></td>
+            <td>Location </td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Operations -->
+
+      
+      <section>
+        <h3>Operations</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="def630b4493bbbc6385da9168c469fbe.html">__init__(name: str, element_type: ElementType , location: Location)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="af9e16129cbfae2f6cac817926b13252.html">get_name(): str</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="610cdd19759f8b2958bbc246b30ee030.html">get_type(): ElementType </a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="6ee1f9799db3b86139889da9b75a20f0.html">get_location(): Location</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="cb9ea83cea5649d7a0764247ffca11a4.html">__validate_name(name: str)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="2edaa3979896b684b51f1365341fd9c9.html">__validate_element_type(element_type: ElementType )</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="72458a244160be6c8aee9800621668c6.html">__validate_location(location: Location)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="e4ffc46f6488de7bd57f05d909dcce13.html">__eq__(other: object): bool</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="67c1a3ccac4609e098743f0626aabb6d.html">__hash__(): int</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="257652496887e8a6a2cfd48f838a8694.html">__repr__(): str</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>CodeElement </td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td><span class='label label-info'>null</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isFinalSpecialization</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isActive</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='25e804b0daee2be8df5adc140750817b.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>has (CodeElement —Location )</a></li>
+        
+        <li><a href='d4ea2fbd48d5d196da257f09e3afe902.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>uses (CodeElement —ElementType )</a></li>
+        
+        <li><a href='de7c5f85b198cb672c4af404a956627a.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SourceFile —CodeElement )</a></li>
+        
+        <li><a href='aae4793abc1c0ce12bf86dd57e75f43e.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Dependency —CodeElement )</a></li>
+        
+        <li><a href='93801ef1d09debb2a830495dfbbe544a.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Metric —CodeElement )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='25e804b0daee2be8df5adc140750817b.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>has (CodeElement —Location )</a></li>
+        
+        <li><a href='d4ea2fbd48d5d196da257f09e3afe902.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>uses (CodeElement —ElementType )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Diagrams -->
+      
+      
+      
+<section class="element-list">
+    <h3>Diagrams</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='45bd995a8a9ac0330420f77fda9464cc.html'><span class='node-icon staruml-icon icon-UMLClassDiagram'></span>Class Diagram - Domain</a></li>
+        
+    </ul>
+</section>
+
+
+      
+      
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

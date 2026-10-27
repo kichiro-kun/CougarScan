@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SourceFile </title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/prose.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>SourceFile </h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-UMLClass"></span>
+          UMLClass
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>CougarScan View</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='2cf8522033695fc0e8e5c569c5214507.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>Domain</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='3cb224e856cfbbc531601382f8795632.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>Entities</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='019accf8ce35902572a12649d673851c.html'><span class='node-icon staruml-icon icon-UMLClass'></span>SourceFile </a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <div class='prose'><p>Исходный файл проекта, содержащий элементы кода.</p>
+<p>Хранит информацию о файле:
+    - path: путь к файлу
+    - elements: список элементов кода внутри файла</p>
+</div>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+      <section>
+        <h3>Attributes</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="e50230503d317dba1af7a4f331ca034f.html">path</a></td>
+            <td>str </td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="931e62cb950ec6f3ab51a2ee720ccb9a.html">elements</a></td>
+            <td>List[CodeElement] </td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="074802d5cde17e0cc219e0079f749bd3.html">element_keys</a></td>
+            <td>Set[Tuple] </td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Operations -->
+
+      
+      <section>
+        <h3>Operations</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="2210169dfb6aac58c04ef0fb0b7c43b4.html">__init__(path: str)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="0cc6dfafd1b0afd6d28573bf1f3441a3.html">get_path(): str</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="daf690b513034e559ae06afa721ab761.html">get_elements(): List[CodeElement]</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="74f8bf847eda358bac4e931a9a09f148.html">get_element_count(): int</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="9055dba5dd9e0d3141bad6d2a583bde4.html">get_element_by_name(name: str): Optional[CodeElement]</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="972baaa2a823750cddd7250aa9ef3107.html">add_element(element: CodeElement): null</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="8588711ac245f9ed15e5f65972bf4569.html">get_elements_by_type(element_typpe: ElementType ): List[CodeElement]</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="85f05b6edf20869fa86a83fca9aa5e6d.html">__validate_path(path: str)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="eb40d74cfcd08fb23a559738d4cb3f0d.html">__validate_element(element: CodeElement)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="5052abbdbc20fb08656a07e3b9e074fc.html">__validate_no_duplicate(element: CodeElement)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="2bf19ba482cf1ee43c839e05023f13fd.html">__validate_name_for_search(name: str)</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="35fbcc81070389adf0f33ab65d4c685d.html">__validate_element_type_for_search(element_type: ElementType )</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="1bf451f91158ee65c874552888207850.html">__get_element_key(element: CodeElement): Tuple</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="16c5134862dadfe11b7ffd08430ebfc7.html">__eq__(other: object): bool</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="633b68804edd7ab3a1b5b64169050b0c.html">__repr__(): str</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="f46313d99b5a02907b5de647aef11437.html">__len__(): int</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="15df3b97f6a2e14fa2d9c66b32539149.html">__iter__(): Iterator[CodeElement]</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+          <tr>
+            <td>private</td>
+            <td><a href="b0b36f13820b2dcc8ee60696a58f86ee.html">__contains__(element: object): bool</a></td>
+            <td><div class='prose'></div></td>
+          </tr>
+          
+        </table>
+      </section>
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>SourceFile </td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>stereotype</td>
+        <td><span class='label label-info'>null</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>visibility</td>
+        <td>public</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>isAbstract</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isFinalSpecialization</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isLeaf</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isActive</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+        
+        
+
+
+        
+        
+
+
+        
+        
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='de7c5f85b198cb672c4af404a956627a.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SourceFile —CodeElement )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='de7c5f85b198cb672c4af404a956627a.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SourceFile —CodeElement )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Diagrams -->
+      
+      
+      
+<section class="element-list">
+    <h3>Diagrams</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='45bd995a8a9ac0330420f77fda9464cc.html'><span class='node-icon staruml-icon icon-UMLClassDiagram'></span>Class Diagram - Domain</a></li>
+        
+    </ul>
+</section>
+
+
+      
+      
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>
