@@ -1,5 +1,5 @@
 Name    Stmts   Miss  Cover   Missing
 -------------------------------------
-TOTAL     185      0   100%
+TOTAL     227      0   100%
 
 8 files skipped due to complete coverage.
