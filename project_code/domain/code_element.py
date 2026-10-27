@@ -15,7 +15,7 @@ __all__: list[str] = [
 ]
 
 __author__ = 'kichiro-kun (Kei)'
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 # =======================================================================================
@@ -160,6 +160,24 @@ class CodeElement:
             self.__name == other.__name and
             self.__element_type == other.__element_type and
             self.__location == other.__location
+        )
+
+    # -----------------------------------------------------------------------------------
+    def __hash__(self) -> int:
+        """
+        Возвращает хэш объекта CodeElement.
+
+        Хэш основан на name, element_type и location,
+        что согласовано с __eq__.
+
+        Returns:
+            Хэш-значение объекта
+        """
+        return hash(
+            (
+                self.__name,
+                self.__element_type,
+                self.__location)
         )
 
     # -----------------------------------------------------------------------------------

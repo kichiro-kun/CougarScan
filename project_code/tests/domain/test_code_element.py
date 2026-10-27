@@ -15,7 +15,7 @@ __all__: list[str] = [
 ]
 
 __author__ = 'kichiro-kun (Kei)'
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 # =======================================================================================
@@ -25,7 +25,7 @@ from project_code.domain.code_element import CodeElement
 from project_code.domain.location import Location
 from project_code.domain.enums import ElementType
 
-from typing import Any, Tuple
+from typing import Any, Dict, Tuple
 
 
 # _______________________________________________________________________________________
@@ -294,6 +294,148 @@ class TestCodeElementEquality(unittest.TestCase):
             with self.subTest(msg=f"Assert №{assert_count}: *{non_code_element}*"):
                 # Check
                 self.assertNotEqual(first=element, second=non_code_element)
+
+
+# _______________________________________________________________________________________
+class TestCodeElementHashing(unittest.TestCase):
+
+    # -----------------------------------------------------------------------------------
+    def setUp(self) -> None:
+        self.location = Location(file_path="/path/to/file.py", line_number=10)
+
+    # -----------------------------------------------------------------------------------
+    def test_code_element_is_hashable(self) -> None:
+        # Build
+        element = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+
+        # Operate
+        hash_value: int = hash(element)
+
+        # Check
+        self.assertIsInstance(obj=hash_value, cls=int)
+
+    # -----------------------------------------------------------------------------------
+    def test_equal_code_elements_have_equal_hashes(self) -> None:
+        # Build
+        element1 = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+        element2 = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+
+        # Check
+        self.assertEqual(first=element1, second=element2)
+        self.assertEqual(first=hash(element1), second=hash(element2))
+
+    # -----------------------------------------------------------------------------------
+    def test_different_code_elements_have_different_hashes(self) -> None:
+        # Build
+        element1 = CodeElement(
+            name="function1",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+        element2 = CodeElement(
+            name="function2",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+        element3 = CodeElement(
+            name="my_function",
+            element_type=ElementType.CLASS,
+            location=self.location
+        )
+
+        # Check
+        self.assertNotEqual(first=hash(element1), second=hash(element2))
+        self.assertNotEqual(first=hash(element1), second=hash(element3))
+        self.assertNotEqual(first=hash(element2), second=hash(element3))
+
+    # -----------------------------------------------------------------------------------
+    def test_hash_is_stable(self) -> None:
+        # Check
+        element = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+
+        # Prepare date
+        hash1: int = hash(element)
+        hash2: int = hash(element)
+        hash3: int = hash(element)
+
+        self.assertEqual(first=hash1, second=hash2)
+        self.assertEqual(first=hash2, second=hash3)
+
+    # -----------------------------------------------------------------------------------
+    def test_code_element_can_be_added_to_set(self) -> None:
+        # Build
+        element1 = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+        element2 = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+        element3 = CodeElement(
+            name="other_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+
+        # Operate
+        element_set: set[CodeElement] = {element1, element2, element3}
+
+        # Check
+        # element1 и element2 равны, поэтому set должен содержать только 2 элемента
+        self.assertEqual(first=len(element_set), second=2)
+
+    # -----------------------------------------------------------------------------------
+    def test_code_element_can_be_used_as_dict_key(self) -> None:
+        # Check
+        element = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+
+        # Operate
+        dictionary: Dict[CodeElement, str] = {element: "value"}
+
+        self.assertEqual(first=dictionary[element], second="value")
+
+    # -----------------------------------------------------------------------------------
+    def test_equal_code_elements_map_to_same_dict_value(self) -> None:
+        # Check
+        element1 = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+        element2 = CodeElement(
+            name="my_function",
+            element_type=ElementType.FUNCTION,
+            location=self.location
+        )
+
+        # Operate
+        dictionary: Dict[CodeElement, str] = {element1: "value"}
+
+        # Check
+        self.assertEqual(first=dictionary[element2], second="value")
 
 
 # _______________________________________________________________________________________
